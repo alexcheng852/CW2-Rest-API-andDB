@@ -73,7 +73,7 @@ async function updateArticle(ctx) {
    let id = ctx.params.id
  // console.log("route-article " , body)
  // console.log("route-id ",id)
-  let result = await model.update(body,id)
+  let result = await model.update(body ,id)
   if (result) {
     ctx.status = 201
     ctx.body = `Article with id ${id} updated` 

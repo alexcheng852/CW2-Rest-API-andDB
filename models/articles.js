@@ -55,7 +55,7 @@ exports.update = async function update (article,id) {
   for(i=0; i<values.length;i++){updateString+=keys[i]+"="+"'"+values[i]+"'"+"," }
  updateString= updateString.slice(0, -1)
  // console.log("updateString ", updateString)
-  let query = `UPDATE articles SET ${updateString} WHERE ID=${id} RETURNING *;`
+  let query = `UPDATE articles SET ${updateString} WHERE ID=${id} ;`
   try{
    await db.run_query(query, values)  
     return {"status": 201}

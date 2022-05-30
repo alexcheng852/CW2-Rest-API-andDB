@@ -5,9 +5,9 @@ describe('Post new user', () => {
     const res = await request(app.callback())
       .post('/api/v1/users')
       .send({
-        username: 'unique_112233',
+        username: 'unique_11',
         password: 'password',
-        email: 'unique_email@example.com'
+        email: 'unique_email1@example.com'
       })
     expect(res.statusCode).toEqual(201)
    // expect(res.body).toHaveProperty('created', true)
